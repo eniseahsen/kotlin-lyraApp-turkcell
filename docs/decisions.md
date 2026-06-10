@@ -22,6 +22,26 @@
 - Son Güncelleme Tarihi: 04.06.2026
 
 
+### Compose UI / Material
+
+- Seçim: **Compose BOM + Material3**
+
+- Son Güncelleme Tarihi: 10.06.2026
+
+- Kapsam: `androidx.compose:compose-bom`, `androidx.compose.ui:ui`, `androidx.compose.ui:ui-graphics`, `androidx.compose.ui:ui-tooling-preview`, `androidx.compose.material3:material3`
+
+- Sebep: Compose bileşen sürümlerini BOM ile senkronize etmek ve modern Material3 tasarım kütüphanesini kullanmak.
+
+
+### Kotlin Coroutines
+
+- Seçim: **kotlinx.coroutines.android**
+
+- Son Güncelleme Tarihi: 10.06.2026
+
+- Sebep: Android ana iş parçacığında asenkron IO ve veri akışı yönetimi için coroutine tabanlı çalışma zamanı.
+
+
 ### Sunum Katmanı Mimarisi
 
 - Seçim: **MVI (Model-View-Intent)**
@@ -38,12 +58,12 @@
 
 - Seçim: **KSP** (kapt değil)
 
-- Son Güncelleme Tarihi: 09.06.2026
+- Son Güncelleme Tarihi: 10.06.2026
 
 - Sürümler: Hilt **2.51.1**, KSP **2.0.21-1.0.28**.
 
-- Compose'da ViewModel: `androidx.hilt.navigation.compose` (`hiltViewModel()`).
-  Compose Navigation bağımlılığı `androidx.navigation:navigation-compose` olarak eklenmiştir.
+- Compose'da ViewModel: `androidx.hilt.navigation.compose` **1.2.0** (`hiltViewModel()`).
+- Compose Navigation bağımlılığı: `androidx.navigation:navigation-compose` **2.8.5**.
 
 - Sebep: KSP, kapt'a göre belirgin biçimde hızlıdır ve Kotlin 2.0 tabanlı AGP 8 ile uyumludur.
 

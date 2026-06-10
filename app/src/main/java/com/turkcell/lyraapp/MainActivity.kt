@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.turkcell.lyraapp.ui.auth.login.LoginRoute
 import com.turkcell.lyraapp.ui.auth.login.LoginScreen
+import com.turkcell.lyraapp.ui.navigation.LyraNavHost
 import com.turkcell.lyraapp.ui.theme.LyraAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LyraAppTheme {
-                LoginRoute()
+                LyraNavHost()
             }
         }
     }

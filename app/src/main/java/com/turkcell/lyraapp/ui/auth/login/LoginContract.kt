@@ -39,6 +39,8 @@ sealed interface LoginIntent {
     data object TogglePasswordVisibility : LoginIntent
     data object Submit: LoginIntent
 
+    data object RegisterClicked: LoginIntent
+
 }
 /**
  * Tek seferlik (one-shot) olaylar: navigasyon, snackbar vb. State içinde tutulmaz,
@@ -47,5 +49,7 @@ sealed interface LoginIntent {
 
 sealed interface LoginEffect {
     data object NavigateToHome : LoginEffect
+
+    data object NavigateToRegister: LoginEffect
     data class ShowError(val message: String) : LoginEffect
 }
