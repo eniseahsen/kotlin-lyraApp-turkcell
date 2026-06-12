@@ -1,19 +1,28 @@
 package com.turkcell.lyraapp.ui.home
 
+import com.turkcell.lyraapp.data.home.PlaylistForYou
+import com.turkcell.lyraapp.data.home.QuickPick
+import com.turkcell.lyraapp.data.home.RecentlyPlayed
+
 /**
  * Home ekranının MVI sözleşmesi: State (durum), Intent (kullanıcı niyeti) ve
  * Effect (tek seferlik olay) tek dosyada toplanmıştır.
  */
 
+
 data class HomeUiState(
-    val headline: String = "Lyra'ya hoş geldin",
-    val description: String = "En sevdiğin şarkıları keşfetmeye başla.",
+    val isLoading: Boolean = false,
+    val greeting: String = "",
+    val userInitials: String = "",
+    val quickPicks: List<QuickPick> = emptyList(),
+    val recentlyPlayed: List<RecentlyPlayed> = emptyList(),
+    val playlistsForYou: List<PlaylistForYou> = emptyList(),
 )
 
 sealed interface HomeIntent {
-    data object LogoutClicked : HomeIntent
+    data object Retry : HomeIntent
 }
 
 sealed interface HomeEffect {
-    data object NavigateToLogin : HomeEffect
+    data class ShowError(val message: String) : HomeEffect
 }
